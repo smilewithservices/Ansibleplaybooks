@@ -1,0 +1,12 @@
+---
+- name: My Test Playbook
+  hosts: webservers
+  become: true
+  tasks:
+   - name: add a list of users
+     user: name'={{items}}' state=present
+     with items:
+      - raj
+      - sai
+      - hari
+
